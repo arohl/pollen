@@ -14,10 +14,10 @@ import calendar
 
 pollen = "https://weather.news.com.au/wa/perth/perth/pollen-index"
 page = urllib.request.urlopen(pollen)
-soup = BeautifulSoup(page)
+soup = BeautifulSoup(page, "html.parser")
 pollen_ul = soup.find(id="pollen-graph")
 pollen_week = pollen_ul.find_all("div")
-print(pollen_week[0].contents[1].string)
+print(f":sunflower: {pollen_week[0].contents[1].string}")
 print("---")
 for x in range(1, 4):
     next_day = datetime.date.today() + datetime.timedelta(days=x)
