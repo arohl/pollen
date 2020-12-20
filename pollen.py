@@ -21,4 +21,4 @@ print(f":sunflower: {pollen_week[0].contents[1].string}")
 print("---")
 for x in range(1, 4):
     next_day = datetime.date.today() + datetime.timedelta(days=x)
-    print (f"{calendar.day_name[next_day.weekday()]} {pollen_week[x].contents[1].string}")
+    print (f"{calendar.day_name[next_day.weekday()]} {pollen_week[x].contents[1].string} | color=black")
