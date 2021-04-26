@@ -1,4 +1,4 @@
-#!/Users/andrew/anaconda3/bin/python3
+#!/usr/bin/env -P/opt/local/bin/:/Users/andrew/opt/anaconda3/bin python3
 
 # <bitbar.title>Perth Pollen</bitbar.title>
 # <bitbar.version>v0.1</bitbar.version>
@@ -17,7 +17,7 @@ page = urllib.request.urlopen(pollen)
 soup = BeautifulSoup(page, "html.parser")
 pollen_ul = soup.find(id="pollen-graph")
 pollen_week = pollen_ul.find_all("div")
-print(f":sunflower: {pollen_week[0].contents[1].string}")
+print(f"🌼{pollen_week[0].contents[1].string}")
 print("---")
 for x in range(1, 4):
     next_day = datetime.date.today() + datetime.timedelta(days=x)
